@@ -1,7 +1,7 @@
 magic
 tech gf180mcuD
 magscale 1 5
-timestamp 1782147994
+timestamp 1782151547
 << metal1 >>
 rect 19945 9890 20110 9895
 rect 19945 9600 19950 9890
@@ -1607,6 +1607,10 @@ use digital  digital_0
 timestamp 1782141273
 transform 1 0 3260 0 1 10020
 box 0 0 30421 6000
+use lily_dino  lily_dino_0
+timestamp 1782151547
+transform 1 0 25255 0 1 930
+box 80 40 7200 5440
 use vco_combo  vco_combo_0
 timestamp 1782136006
 transform -1 0 29070 0 1 6825
