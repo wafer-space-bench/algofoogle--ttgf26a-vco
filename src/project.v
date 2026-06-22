@@ -17,7 +17,13 @@
 //    ./librelane/digital/config9t.json
 // and from source in
 //    ./verilog/rtl/digital.v
+//
+// The code below is just a copy of ./verilog/dv/top.v...
+//
 module tt_um_algofoogle_ttgf26a_vco (
+    input  wire       VGND,
+    input  wire       VDPWR,    // 3.3v core power supply
+//    input  wire       VAPWR,    // second analog power supply (VAA)
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -28,12 +34,28 @@ module tt_um_algofoogle_ttgf26a_vco (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+    wire vco_osc; // Oscillating output from the VCO.
+    wire [8:0] vco_dn; // Negated binary inputs (9 bits) for DAC that produces 0..3.3V vin for the VCO.
 
-  // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+    digital digital_0 (
+        .VDD        (VDPWR),
+        .VSS        (VGND),
+        .clk        (clk),
+        .rst_n      (rst_n),
+        .ui_in      (ui_in),
+        .uio_in     (uio_in),
+        .uio_oe     (uio_oe),
+        .uio_out    (uio_out),
+        .uo_out     (uo_out),
+        .vco_dn     (vco_dn), // Out to DAC/VCO combo (vco_combo).
+        .vco_osc    (vco_osc) // Clk in from DAC/VCO combo.
+    );
+
+    vco_combo vco_combo_0 (
+        .VPWR       (VDPWR),
+        .VGND       (VGND),
+        .dn         (vco_dn),
+        .vco_osc    (vco_osc)
+    );
 
 endmodule
