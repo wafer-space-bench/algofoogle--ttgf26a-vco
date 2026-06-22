@@ -8,15 +8,14 @@ if {$project eq "tt_um_algofoogle_ttgf26a_vco"} {
     # --- Add netlists that contribute to the overall schematics of the design ---
 
     # Add spice files of any analog block(s), e.g:
-    # readnet spice ../xschem/simulation/csringosc.spice $schem
-    # readnet spice ../xschem/simulation/bufinv_2.spice $schem
+    readnet spice ../xschem/simulation/vco_combo.spice $schem
 
     # Add GL verilog of digital block(s) (i.e. flat file from LibreLane hardening):
-    # readnet verilog ../verilog/gl/digital.pnl.v $schem
+    readnet verilog ../verilog/gl/digital.pnl.v $schem
 
     # Top-level abstract integration verilog, e.g. main project.v, or LVS-tweaked version:
     # readnet verilog ../src/LVS-project.v $schem
-    # readnet verilog ../src/project.v $schem
+    readnet verilog ../verilog/dv/top.v $schem
 
     lvs "$layout $project" "$schem $project" \
         $::env(PDK_ROOT)/$::env(PDK)/libs.tech/netgen/$::env(PDK)_setup.tcl \

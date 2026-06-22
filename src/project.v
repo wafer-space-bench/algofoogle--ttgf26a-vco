@@ -1,11 +1,23 @@
 /*
- * Copyright (c) 2024 Your Name
+ * Copyright (c) 2026 Anton Maurovic
  * SPDX-License-Identifier: Apache-2.0
  */
 
 `default_nettype none
 
-module tt_um_example (
+//////// !!NOTE!! This isn't the real module.
+// This 1x1 tile is a custom layout, and this file
+// is just included here to keep various scripts happy.
+// The real layout is supplied directly as
+//    ./gds/tt_um_algofoogle_ttgf26a_vco.gds
+// and is generated from
+//    ./magic/tt_um_algofoogle_ttgf26a_vco.mag
+// It is represented by ./verilog/dv/top.v
+// and its digital block is hardened using config in
+//    ./librelane/digital/config9t.json
+// and from source in
+//    ./verilog/rtl/digital.v
+module tt_um_algofoogle_ttgf26a_vco (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
