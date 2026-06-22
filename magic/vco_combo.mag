@@ -1,0 +1,102 @@
+magic
+tech gf180mcuD
+timestamp 1782136006
+<< nwell >>
+rect 108 247 830 361
+<< pwell >>
+rect 108 190 830 247
+rect 878 0 882 191
+<< metal1 >>
+rect 90 352 99 361
+rect 174 352 183 361
+rect 258 352 267 361
+rect 342 352 351 361
+rect 426 352 435 361
+rect 510 352 519 361
+rect 594 352 603 361
+rect 678 352 687 361
+rect 762 352 771 361
+rect 1193 348 1232 349
+rect 1193 311 1194 348
+rect 1231 311 1232 348
+rect 1193 310 1232 311
+rect 0 184 27 217
+rect 870 184 988 195
+rect 0 10 12 184
+rect 872 27 890 184
+rect 1205 179 1232 310
+rect 1692 88 1706 89
+rect 1692 62 1693 88
+rect 1705 62 1706 88
+rect 1692 61 1706 62
+rect 872 26 1161 27
+rect 872 10 1011 26
+rect 0 5 1011 10
+rect 1160 5 1161 26
+rect 0 0 1161 5
+<< via1 >>
+rect 1194 311 1231 348
+rect 1693 62 1705 88
+rect 1011 5 1160 26
+<< metal2 >>
+rect 5 348 1232 349
+rect 5 322 1194 348
+rect 1193 311 1194 322
+rect 1231 311 1232 348
+rect 1193 310 1232 311
+rect 1005 210 1017 211
+rect 1005 167 1006 210
+rect 1016 167 1017 210
+rect 1005 166 1017 167
+rect 1692 88 1706 361
+rect 1692 62 1693 88
+rect 1705 62 1706 88
+rect 1692 61 1706 62
+rect 1010 26 1161 27
+rect 1010 5 1011 26
+rect 1160 23 1161 26
+rect 1160 5 1294 23
+rect 1010 0 1294 5
+<< via2 >>
+rect 1006 167 1016 210
+<< metal3 >>
+rect 863 210 1017 211
+rect 863 194 1006 210
+rect 1005 167 1006 194
+rect 1016 167 1017 210
+rect 1005 166 1017 167
+use csringosc  csringosc_0
+timestamp 1781533615
+transform 1 0 1200 0 1 21
+box -319 -21 506 170
+use r2r_dac  r2r_dac_0
+timestamp 1782132612
+transform 1 0 6 0 1 6
+box -6 -6 874 355
+<< labels >>
+flabel metal1 0 190 27 217 0 FreeSans 48 0 0 0 VGND
+port 0 nsew
+flabel metal2 5 322 32 349 0 FreeSans 48 0 0 0 VPWR
+port 1 nsew
+flabel metal3 932 194 972 211 0 FreeSans 32 0 0 0 vco_vin
+flabel metal1 90 352 99 361 0 FreeSans 24 0 0 0 dn[0]
+port 2 nsew
+flabel metal1 174 352 183 361 0 FreeSans 24 0 0 0 dn[1]
+port 3 nsew
+flabel metal1 258 352 267 361 0 FreeSans 24 0 0 0 dn[2]
+port 4 nsew
+flabel metal1 342 352 351 361 0 FreeSans 24 0 0 0 dn[3]
+port 5 nsew
+flabel metal1 426 352 435 361 0 FreeSans 24 0 0 0 dn[4]
+port 6 nsew
+flabel metal1 510 352 519 361 0 FreeSans 24 0 0 0 dn[5]
+port 7 nsew
+flabel metal1 594 352 603 361 0 FreeSans 24 0 0 0 dn[6]
+port 8 nsew
+flabel metal1 678 352 687 361 0 FreeSans 24 0 0 0 dn[7]
+port 9 nsew
+flabel metal1 762 352 771 361 0 FreeSans 24 0 0 0 dn[8]
+port 10 nsew
+flabel metal2 1692 347 1706 361 0 FreeSans 32 0 0 0 vco_osc
+port 11 nsew
+<< end >>
