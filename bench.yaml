@@ -1,0 +1,26 @@
+source:
+  url: https://github.com/algofoogle/ttgf26a-vco
+  original_url: null
+  kind: fork
+  why: GitHub fork of the upstream repository
+  licence: null
+  upstream_default_branch: main
+tapeouts:
+- org: tinytapeout
+  run: ttgf26a
+  slot: tt_um_algofoogle_ttgf26a_vco
+  project: VCO driven by DAC
+  size: 1x1
+  kind: analog
+  commit: 3d790fd2d12891b352589d7fa46e1fb712e155a4
+  commit_source: commit from the shuttle repo's projects/<name>/commit_id.json
+  tag: tinytapeout/ttgf26a/tt_um_algofoogle_ttgf26a_vco
+  branch: tapeout/tinytapeout/ttgf26a/tt_um_algofoogle_ttgf26a_vco
+  page: https://app.tinytapeout.com/shuttles/ttgf26a
+generated: '2026-10-17T23:05:47Z'
+tooling: https://github.com/wafer-space/wafer.space-bench
+index: https://wafer-space-bench.github.io
+branches:
+- about
+- tapeout/tinytapeout/ttgf26a/tt_um_algofoogle_ttgf26a_vco
+- upstream/main
